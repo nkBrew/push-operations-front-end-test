@@ -1,0 +1,283 @@
+#root {
+  margin: 0 auto;
+  color: #0d325f;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.layout-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.navbar-container {
+  width: 281px;
+  background: #ffffff;
+  height: 100%;
+  box-shadow: 1px 0px 0px 0px #e2e9f2;
+  z-index: 500;
+}
+
+.navbar-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-flex {
+  display: flex;
+  flex-direction: column;
+  padding-top: 13px;
+}
+
+.navbar-items-container {
+  top: 59px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+}
+
+.navbar-item-current,
+.navbar-item {
+  height: 33px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.navbar-item {
+  font-weight: 400;
+}
+
+.link,
+a {
+  color: inherit;
+  text-decoration: inherit;
+  font-weight: inherit;
+}
+
+.navbar-item-current {
+  font-weight: 700;
+  text-align: left;
+  background: #f4f6f9;
+  color: #0d325f;
+}
+
+.navbar-logo {
+  display: flex;
+  align-content: center;
+  padding-left: 16px;
+  padding-top: 13px;
+}
+
+.header-container {
+  background: #ffffff;
+  z-index: 100;
+  box-shadow: 0px 1px 0px 0px #e2e9f2;
+}
+
+.header-flex {
+  display: flex;
+  height: 57px;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.user-flex {
+  display: flex;
+}
+
+.user-contact-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #0d325f;
+}
+
+.user-email {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #61748f;
+}
+
+.user-avatar {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #68bee2;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin-top: 1px;
+  margin-right: 7px;
+}
+
+main {
+  flex: 1;
+  background: #f4f6f9;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-outer-wrapper {
+  flex: 1;
+  overflow: scroll;
+}
+
+.page-inner-container {
+  padding-top: 20px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchbar {
+  width: 548px;
+  height: 33px;
+  background: #ffffff;
+  color: #0d325f;
+  border: 1px solid #e2e9f2;
+  text-indent: 12px;
+  margin-bottom: 20px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.employee-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.employee-card {
+  background: #ffffff;
+  width: 264px;
+  height: 93px;
+  border: 1px solid #e2e9f2;
+  color: #0d325f;
+}
+
+.employee-card-inner {
+  padding: 20px 20px 19px 20px;
+}
+
+.employee-card-name {
+  padding-bottom: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+}
+
+.employee-card-hours {
+  display: flex;
+  justify-content: space-between;
+}
+
+.employee-card-hours-label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-container {
+    display: none;
+  }
+
+  .page-inner-container {
+    padding: 0;
+    margin: 20px auto;
+
+    align-items: center;
+    max-width: 548px;
+  }
+
+  .employee-card {
+    flex: 0 0 auto;
+    width: 262px;
+  }
+
+  .searchbar {
+    padding: 0;
+    width: 546px;
+  }
+}
