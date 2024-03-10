@@ -18,4 +18,6 @@ followed by:
 
 - I used pure css rather than setting up tailwind or StyledComponents partially to reduce setup time, but also because I wanted to follow the mockups as close as possible
 
+- I chose to use only one stylesheet to reduce some development time
+
 - Vite was used to bootstrap the project

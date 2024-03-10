@@ -24,21 +24,26 @@ const EmployeesPage = () => {
   }, []);
 
   const renderEmployeeCards = () => {
-    return employees
-      .filter((e) =>
-        searchByName
-          ? `${e.firstName} ${e.lastName}`.toLowerCase().includes(searchByName)
-          : true
-      )
-      .map((e) => (
-        <EmployeeCard
-          key={`key-${e.employeeId}`}
-          employeeId={e.employeeId}
-          firstName={e.firstName}
-          lastName={e.lastName}
-          totalHours={e.totalHours}
-        />
-      ));
+    const filteredEmployees = employees.filter((e) =>
+      searchByName
+        ? `${e.firstName} ${e.lastName}`.toLowerCase().includes(searchByName)
+        : true
+    );
+
+    if (filteredEmployees.length === 0) {
+      console.log("hi");
+      return <div className="employees-not-found">No employees match!</div>;
+    }
+
+    return filteredEmployees.map((e) => (
+      <EmployeeCard
+        key={`key-${e.employeeId}`}
+        employeeId={e.employeeId}
+        firstName={e.firstName}
+        lastName={e.lastName}
+        totalHours={e.totalHours}
+      />
+    ));
   };
   return (
     <div className="page-outer-wrapper">
