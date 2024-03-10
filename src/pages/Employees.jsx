@@ -31,7 +31,6 @@ const EmployeesPage = () => {
     );
 
     if (filteredEmployees.length === 0) {
-      console.log("hi");
       return <div className="employees-not-found">No employees match!</div>;
     }
 
